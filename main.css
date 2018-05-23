@@ -1,0 +1,46 @@
+body {
+  font-family: 'Saira Condensed', sans-serif;
+  border: none;
+  background-image: url('he_man.jpg');
+  background-repeat: repeat;
+  /* background-size: cover; */
+  background-position: top;
+}
+
+#container {
+}
+
+button {
+  padding: 20px 100px;
+  margin: 15px;
+  background-color: greenyellow;
+  font-size: 12px;
+  text-align: right;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: lightblue;
+}
+
+h1 {
+  text-align: center;
+  font-size: 100px;
+  font-family: 'Londrina Shadow', cursive;
+  letter-spacing: 0.2rem;
+  color: black;
+}
+
+#myForm {
+  padding: 25px;
+  text-align: center;
+}
+
+.labels {
+  padding: 0px 20px;
+  color: lightslategray;
+}
+
+input {
+  padding: 0px 75px;
+}
