@@ -10,6 +10,10 @@ body {
 #container {
 }
 
+img {
+  width: 600px;
+}
+
 button {
   padding: 20px 100px;
   margin: 15px;
@@ -43,4 +47,22 @@ h1 {
 
 input {
   padding: 0px 75px;
+}
+
+/* text positioning on image */
+
+#bot_text {
+  position: relative;
+  z-index: 1;
+  right: 300px;
+  bottom: 50px;
+  color: white;
+}
+
+#top_text {
+  position: relative;
+  bottom: 530px;
+  right: 300px;
+  z-index: 1;
+  color: white;
 }

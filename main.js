@@ -12,17 +12,23 @@ function main() {
   });
 }
 
-function generateMeme(imageURL, captionText) {
+function generateMeme(imageURL, topCaptionText, bottomCaptionText) {
   var newDiv = document.createElement('div');
 
   var memeImg = document.createElement('img');
   memeImg.setAttribute('src', imageURL);
 
-  var memeTxt = document.createElement('span');
-  memeTxt.innerText = captionText;
+  var memeTopTxt = document.createElement('span');
+  memeTopTxt.innerText = topCaptionText;
+  memeTopTxt.setAttribute('id', 'top_text');
+
+  var memeBotTxt = document.createElement('span');
+  memeBotTxt.innerText = bottomCaptionText;
+  memeBotTxt.setAttribute('id', 'bot_text');
 
   newDiv.appendChild(memeImg);
-  newDiv.appendChild(memeTxt);
+  newDiv.appendChild(memeTopTxt);
+  newDiv.appendChild(memeBotTxt);
 
   var container = document.getElementById('container');
   container.appendChild(newDiv);
