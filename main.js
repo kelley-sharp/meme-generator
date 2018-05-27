@@ -21,6 +21,10 @@ function generateMeme(imageURL, topCaptionText, bottomCaptionText) {
   document.getElementById('container').appendChild(imageHolder);
   imageHolder.style.backgroundImage = `url${imageURL}`;
 
+  var x = document.createElement('h3');
+  x.innerText = '✘';
+  imageHolder.appendChild(x);
+
   var memeImg = document.createElement('img');
   memeImg.className = 'meme';
   memeImg.style.maxHeight = '400px';
