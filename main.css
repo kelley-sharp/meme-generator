@@ -67,6 +67,8 @@ input {
   top: 50px;
   width: 100%;
   color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-size: x-large;
 }
 
 #bot_text {
@@ -76,12 +78,15 @@ input {
   bottom: -35px;
   width: 100%;
   color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-size: x-large;
 }
 
 .meme {
   display: block;
   margin: 10px auto;
   width: 600px;
+  margin-top: -20px;
 }
 
 .x {
@@ -91,4 +96,8 @@ input {
 
 .x:hover {
   cursor: pointer;
+}
+
+.image_holder {
+  margin-bottom: 30px;
 }

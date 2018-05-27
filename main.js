@@ -20,6 +20,7 @@ function generateMeme(imageURL, topCaptionText, bottomCaptionText) {
   imageHolder.style.position = 'relative';
   document.getElementById('container').appendChild(imageHolder);
   imageHolder.style.backgroundImage = `url${imageURL}`;
+  imageHolder.className = 'image_holder';
 
   var x = document.createElement('button');
   x.innerText = '✘';
