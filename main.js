@@ -56,5 +56,6 @@ function generateMeme(imageURL, topCaptionText, bottomCaptionText) {
   container.appendChild(imageHolder);
 }
 
-/* NOTE: Could not figure out why (only when captions are added to the image)
- it is more difficult to find the spot on x button that triggers the click" */
+/* NOTE: Could not figure out why (when captions are added to the image)
+ it is more difficult to find the spot on x button that triggers the click than 
+ when an image is submitted only" */
