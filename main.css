@@ -27,7 +27,7 @@ body {
 
 #submit_button:hover {
   cursor: pointer;
-  background-color: lightblue;
+  background-color: lightskyblue;
 }
 
 #submit_button:focus {
