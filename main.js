@@ -21,8 +21,12 @@ function generateMeme(imageURL, topCaptionText, bottomCaptionText) {
   document.getElementById('container').appendChild(imageHolder);
   imageHolder.style.backgroundImage = `url${imageURL}`;
 
-  var x = document.createElement('h3');
+  var x = document.createElement('button');
   x.innerText = '✘';
+  x.className = 'x';
+  x.addEventListener('click', function() {
+    container.removeChild(imageHolder);
+  });
   imageHolder.appendChild(x);
 
   var memeImg = document.createElement('img');
@@ -51,6 +55,10 @@ function generateMeme(imageURL, topCaptionText, bottomCaptionText) {
 
 function resetForm(inputs) {
   inputs.reset();
+}
+
+function removeMeme(theMeme) {
+  theMeme.parentNode.removeChild(theMeme);
 }
 
 //clear input boxes when form is submitted.
