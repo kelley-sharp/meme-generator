@@ -8,6 +8,7 @@ body {
 }
 
 #container {
+  position: relative;
 }
 
 img {
@@ -27,6 +28,10 @@ button:hover {
   background-color: lightblue;
 }
 
+button:focus {
+  outline: none;
+}
+
 h1 {
   text-align: center;
   font-size: 100px;
@@ -35,7 +40,7 @@ h1 {
   color: black;
 }
 
-#myForm {
+#my_form {
   padding: 25px;
   text-align: center;
 }
@@ -51,18 +56,25 @@ input {
 
 /* text positioning on image */
 
-#bot_text {
-  position: relative;
-  z-index: 1;
-  right: 300px;
-  bottom: 50px;
+#top_text {
+  left: 0;
+  position: absolute;
+  text-align: center;
+  top: 30px;
+  width: 100%;
   color: white;
 }
 
-#top_text {
-  position: relative;
-  bottom: 530px;
-  right: 300px;
-  z-index: 1;
+#bot_text {
+  left: 0;
+  position: absolute;
+  text-align: center;
+  bottom: 30px;
+  width: 100%;
   color: white;
+}
+
+.meme {
+  display: block;
+  margin: 10px auto;
 }

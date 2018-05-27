@@ -2,20 +2,28 @@ document.addEventListener('DOMContentLoaded', main);
 
 function main() {
   console.log('main function');
-  var form = document.getElementById('myform');
+  var form = document.getElementById('my_form');
   form.addEventListener('submit', function(event) {
     event.preventDefault();
     var picURL = event.target.picture.value; // event -> { target: { picture: { value: 'http://somethingtheuserentered.com' }}}
     var topCaption = event.target.topCaption.value;
     var bottomCaption = event.target.bottomCaption.value;
     generateMeme(picURL, topCaption, bottomCaption);
+    form.reset();
   });
 }
 
 function generateMeme(imageURL, topCaptionText, bottomCaptionText) {
-  var newDiv = document.createElement('div');
+  var imageHolder = document.createElement('div');
+
+  imageHolder.style.height = '400px';
+  imageHolder.style.position = 'relative';
+  document.getElementById('container').appendChild(imageHolder);
+  imageHolder.style.backgroundImage = `url${imageURL}`;
 
   var memeImg = document.createElement('img');
+  memeImg.className = 'meme';
+  memeImg.style.maxHeight = '400px';
   memeImg.setAttribute('src', imageURL);
 
   var memeTopTxt = document.createElement('span');
@@ -26,15 +34,21 @@ function generateMeme(imageURL, topCaptionText, bottomCaptionText) {
   memeBotTxt.innerText = bottomCaptionText;
   memeBotTxt.setAttribute('id', 'bot_text');
 
-  newDiv.appendChild(memeImg);
-  newDiv.appendChild(memeTopTxt);
-  newDiv.appendChild(memeBotTxt);
+  imageHolder.appendChild(memeTopTxt);
+  imageHolder.appendChild(memeImg);
+  imageHolder.appendChild(memeBotTxt);
 
   var container = document.getElementById('container');
-  container.appendChild(newDiv);
+  container.appendChild(imageHolder);
+
+  // var container = document.getElementById('container');
+  // container.appendChild(newDiv);
 }
 
-//clear input box when clicked.
-//add texts to img
-//keep meme on page when additional memes are generated.
-//style form to be vertical
+function resetForm(inputs) {
+  inputs.reset();
+}
+
+//clear input boxes when form is submitted.
+//properly add texts to img
+//feature to remove memes
