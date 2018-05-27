@@ -13,7 +13,7 @@ function main() {
 }
 
 function generateMeme(imageURL, topCaptionText, bottomCaptionText) {
-  //div to hold meme image
+  //div to hold meme
   var imageHolder = document.createElement('div');
   imageHolder.style.height = '400px';
   imageHolder.style.position = 'relative';
@@ -21,7 +21,7 @@ function generateMeme(imageURL, topCaptionText, bottomCaptionText) {
   imageHolder.style.backgroundImage = `url${imageURL}`;
   imageHolder.className = 'image_holder';
 
-  //x button to remove the div that holds meme image
+  //x button to remove the div that holds the meme
   var x = document.createElement('button');
   x.innerText = '✘';
   x.className = 'x';
@@ -46,7 +46,7 @@ function generateMeme(imageURL, topCaptionText, bottomCaptionText) {
   memeBotTxt.innerText = bottomCaptionText;
   memeBotTxt.setAttribute('id', 'bot_text');
 
-  //attach everything to the div that holds meme image
+  //attach text and img to the div
   imageHolder.appendChild(memeTopTxt);
   imageHolder.appendChild(memeImg);
   imageHolder.appendChild(memeBotTxt);
@@ -55,3 +55,6 @@ function generateMeme(imageURL, topCaptionText, bottomCaptionText) {
   var container = document.getElementById('container');
   container.appendChild(imageHolder);
 }
+
+/* NOTE: Could not figure out why (only when captions are added to the image)
+ it is more difficult to find the spot on x button that triggers the click" */

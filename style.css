@@ -12,22 +12,22 @@ body {
 }
 
 #submit_button {
-  background-color: greenyellow;
-  font-size: 12px;
+  background-color: #84f936;
+  font-size: 25px;
   text-align: right;
-  font-family: 'Londrina Shadow', cursive;
-  font-size: xx-large;
+  font-family: 'Saira Condensed', sans-serif;
   padding-top: 10px;
   padding-bottom: 10px;
-  padding-right: 50px;
-  padding-left: 50px;
+  padding-right: 20px;
+  padding-left: 20px;
   margin-top: 60px;
   margin-right: 10px;
+  border-radius: 10% / 50%;
 }
 
 #submit_button:hover {
   cursor: pointer;
-  background-color: lightskyblue;
+  background-color: #fffa7a;
 }
 
 #submit_button:focus {
