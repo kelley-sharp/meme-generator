@@ -48,19 +48,8 @@ function generateMeme(imageURL, topCaptionText, bottomCaptionText) {
 
   var container = document.getElementById('container');
   container.appendChild(imageHolder);
-
-  // var container = document.getElementById('container');
-  // container.appendChild(newDiv);
 }
 
 function resetForm(inputs) {
   inputs.reset();
 }
-
-function removeMeme(theMeme) {
-  theMeme.parentNode.removeChild(theMeme);
-}
-
-//clear input boxes when form is submitted.
-//properly add texts to img
-//feature to remove memes
